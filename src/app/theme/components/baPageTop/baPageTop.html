@@ -1,0 +1,13 @@
+<div class="page-top clearfix" baScrollPosition maxHeight="50" (scrollChange)="scrolledChanged($event)" [ngClass]="{scrolled: isScrolled}">
+    <a routerLink="/pages/dashboard" class="al-logo clearfix"><img src="../../assets/images/logo_poupa.png"></a>
+    <a href (click)="toggleMenu()" class="collapse-menu-link ion-navicon"></a>
+
+
+    <div class="search">
+        <i class="ion-ios-search-strong" ng-click="startSearch()"></i>
+        <input id="searchInput" type="text">
+    </div>
+    <div class="user-profile clearfix pull-right ">
+        <button type="button" (click)="fazerLogout()" class="btn btn-primary ">Logout</button>
+    </div>
+</div>

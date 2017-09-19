@@ -1,0 +1,35 @@
+@media screen and (min-width: 400px) and (max-width: 570px) {
+    div#gauge_chart {
+        zoom: 1.0;
+        margin-left: 10%;
+    }
+}
+
+@media screen and (min-width: 571px) and (max-width: 736px) {
+    div#gauge_chart {
+        zoom: 0.4;
+        margin-left: -120%;
+    }
+}
+
+@media screen and (min-width: 737px) and (max-width: 1080px) {
+    div#gauge_chart {
+        zoom: 0.6;
+        margin-left: -92%;
+    }
+}
+
+@media screen and (min-width: 1081px) and (max-width: 1200px) {
+    div#gauge_chart {
+        zoom: 1.0;
+        margin-left: -46%;
+        ;
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1600px) {
+    div#gauge_chart {
+        zoom: 1.0;
+        margin-left: -24%;
+    }
+}
