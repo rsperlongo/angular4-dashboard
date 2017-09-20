@@ -1,10 +1,23 @@
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, CanActivate } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
+import { AuthGuard } from 'app/_guards';
 
 export const routes: Routes = [
-  { path : 'Home', redirectTo: 'login', pathMatch: 'full' },
-   { path: '', redirectTo: 'login', pathMatch: 'full' },
-   { path: '**', redirectTo: 'login' },
+  {   
+      path : '', 
+      redirectTo: 'login', 
+      pathMatch: 'full',
+      canActivate: [AuthGuard] 
+    },
+   { 
+      path: '', 
+      redirectTo: 'login', 
+      pathMatch: 'full' 
+    },
+   {  
+     path: '**', 
+      redirectTo: 'login' 
+    },
    {
     path: '',
     redirectTo: '/login',
