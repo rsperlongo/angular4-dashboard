@@ -1,7 +1,7 @@
 import { RetornoLogin } from './../../_models/login.model';
 import { AuthenticationService } from './../../_services/authentication.service';
 import { Router } from '@angular/router';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, ActivatedRoute  } from '@angular/router';
 import * as moment from 'moment';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, AbstractControl, FormBuilder, Validators } from '@angular/forms';
@@ -14,6 +14,8 @@ import { FormGroup, AbstractControl, FormBuilder, Validators } from '@angular/fo
 })
 export class LoginComponent implements OnInit {
   model: any = {};
+  loading: false;
+  returnUrl: string;
  // loading: any;
   error: 'Usuário ou Senha Incorretos';
 
@@ -26,6 +28,7 @@ export class LoginComponent implements OnInit {
   @ViewChild('userNameText') userNameText;
   @ViewChild('passwordText') passwordText;
   constructor(
+    private route: ActivatedRoute,
     private router: Router,
     private authenticationService: AuthenticationService,
     fb: FormBuilder) {
@@ -40,6 +43,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.authenticationService.logout();
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
     this.userNameText.nativeElement.value = "44444444444";
     this.passwordText.nativeElement.value = "prodesp";
   }
