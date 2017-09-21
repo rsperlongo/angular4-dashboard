@@ -55,7 +55,10 @@ export class LoginComponent implements OnInit {
     this.body += "username=" + this.userNameText.nativeElement.value + "&";
     this.body += "password=" + this.passwordText.nativeElement.value + "&";
     this.body += "scope=openid profile offline_access Dashboard.Search";
-    this.authenticationService.login(this.body).subscribe(value => this.retornoLogin(value));
+    this.authenticationService.login(this.body)
+    .subscribe(value => this.retornoLogin(value),
+               data => {this.router.navigate([this.returnUrl])
+              });
 
 
 
