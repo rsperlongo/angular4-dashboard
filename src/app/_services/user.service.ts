@@ -15,7 +15,7 @@ export class UserService {
         const headers = new Headers({ 'Authorization': + 'Bearer ' + tk });
         const options = new RequestOptions({ headers });
 
-        return this.http.post('http://desenv.autenticador.sp.gov.br/connect/token', options)
+        return this.http.post('http://api/token', options)
             .map((response: Response) => response.json());
     }
 
