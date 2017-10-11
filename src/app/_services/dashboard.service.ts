@@ -15,7 +15,7 @@ export class DashBoardService {
         this.header = new Headers();
         const bearer: string = 'Bearer ' + token;
         this.header.append('Authorization', bearer);
-        let url = 'http://desenv.car.api.sp.gov.br/api/totem/dashboard/atendimento/count/inicio/' + inicio + '/fim/' + fim;
+        let url = 'http://xxx.xxx.xxx.xx.xxx.xx/api/totem/dashboard/atendimento/count/inicio/' + inicio + '/fim/' + fim;
         
         return this.http.get(url, 
                             { headers: this.header })
@@ -28,7 +28,7 @@ export class DashBoardService {
         this.header = new Headers();
         const bearer: string = 'Bearer ' + token;
         this.header.append('Authorization', bearer);
-        let url = 'http://desenv.car.api.sp.gov.br/api/totem/dashboard/pagamento/count/inicio/' + inicio + '/fim/' + fim;
+        let url = 'http://http://xxx.xxx.xxx.xx.xxx.xx/api/totem/dashboard/pagamento/count/inicio/' + inicio + '/fim/' + fim;
         return this.http.get(url, 
                             { headers: this.header })
                         .map((response: Response) => response.json())
@@ -40,7 +40,7 @@ export class DashBoardService {
         this.header = new Headers();
         const bearer: string = 'Bearer ' + token;
         this.header.append('Authorization', bearer);
-        let url = 'http://desenv.car.api.sp.gov.br/api/totem/dashboard/dare/count/inicio/' + inicio + '/fim/' + fim;
+        let url = 'http://http://xxx.xxx.xxx.xx.xxx.xx/api/totem/dashboard/dare/count/inicio/' + inicio + '/fim/' + fim;
         
         return this.http.get(url, 
                             { headers: this.header })
@@ -53,7 +53,7 @@ export class DashBoardService {
         this.header = new Headers();
         const bearer: string = 'Bearer ' + token;
         this.header.append('Authorization', bearer);
-        let url = 'http://desenv.car.api.sp.gov.br/api/totem/dashboard/agendamento/top/inicio/' + inicio + '/fim/' + fim;
+        let url = 'http://http://xxx.xxx.xxx.xx.xxx.xx/api/totem/dashboard/agendamento/top/inicio/' + inicio + '/fim/' + fim;
         
         return this.http.get(url, 
                             { headers: this.header })
@@ -66,7 +66,7 @@ export class DashBoardService {
         this.header = new Headers();
         const bearer: string = 'Bearer ' + token;
         this.header.append('Authorization', bearer);
-        const url = 'http://desenv.car.api.sp.gov.br/api/totem/dashboard/tma/inicio/' + inicio + '/fim/' + fim;
+        const url = 'http://http://xxx.xxx.xxx.xx.xxx.xx/api/totem/dashboard/tma/inicio/' + inicio + '/fim/' + fim;
         
         return this.http.get(url, 
                             { headers: this.header })
@@ -79,7 +79,7 @@ export class DashBoardService {
         this.header = new Headers();
         const bearer: string = 'Bearer ' + token;
         this.header.append('Authorization', bearer);
-        const url = 'http://desenv.car.api.sp.gov.br/api/totem/dashboard/tipo/inicio/' + inicio + '/fim/' + fim;
+        const url = 'http://http://xxx.xxx.xxx.xx.xxx.xx/api/totem/dashboard/tipo/inicio/' + inicio + '/fim/' + fim;
         
         return this.http.get(url, 
                             { headers: this.header })
