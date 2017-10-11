@@ -16,7 +16,7 @@ export class AuthenticationService {
     }
 
     login(body: string): Observable<string> {
-        return this.http.post('http://desenv.autenticador.sp.gov.br/connect/token', 
+        return this.http.post('http://http://xxx.xxx.xxx.xx.xxx.xx/connect/token', 
                             body, 
                             { headers: this.header })
                         .map((response: Response) => response.json());
@@ -24,7 +24,7 @@ export class AuthenticationService {
     }
     refreshToken(body: string): Observable<string> {
 
-        return this.http.post('http://desenv.autenticador.sp.gov.br/connect/token', 
+        return this.http.post('http://http://xxx.xxx.xxx.xx.xxx.xx/connect/token', 
                             body, 
                             { headers: this.header })
                         .map((response: Response) => response.json());
